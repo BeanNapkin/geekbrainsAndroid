@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="My first App!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewQuestion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="1. Введите своё имя:"
+        android:textColor="#5C5C5C"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Пельмешулька Пуньк"
+        android:textSize="14sp" />
+
+    <Switch
+        android:id="@+id/switchQuestion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#5C5C5C"
+        android:text="2. Вы когда-нибудь изучали программирование?" />
+
+    <TextView
+        android:id="@+id/textViewQuestion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="3. Какой язык изучали?"
+        android:textColor="#5C5C5C"
+        android:fontFamily="@font/montserrat_bold"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxJava"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Java" />
+
+    <CheckBox
+        android:id="@+id/checkBoxC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="C++" />
+
+    <CheckBox
+        android:id="@+id/checkBoxKotlin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kotlin" />
+
+    <CheckBox
+        android:id="@+id/checkBoxJavaScript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Javascript" />
+
+    <TextView
+        android:id="@+id/textViewQuestion4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="#5C5C5C"
+        android:text="4. Хотите продолжить изучать?" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#E8E8E8"
+        android:ellipsize="none"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="ToggleButton"
+        android:textOff="Не"
+        android:textOn="Ага" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/redButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="КРАСНАЯ КНОПКА"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
