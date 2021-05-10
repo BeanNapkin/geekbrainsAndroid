@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screenMargin">10dp</dimen>
+    <dimen name="spaceBetweenButtons">10dp</dimen>
+    <dimen name="textSizeForTextButtonsLandscape">10sp</dimen>
+    <dimen name="textSizeForTextButtons">12sp</dimen>
+</resources>
