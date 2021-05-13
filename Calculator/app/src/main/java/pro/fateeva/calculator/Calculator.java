@@ -16,56 +16,12 @@ public class Calculator implements Serializable {
     private boolean isNegative = false;
 
     private double number1 = 0;
+    private double number2 = 0;
     private double result = 0;
 
-    public void clickOnButton0() {
-        rawInput = rawInput + "0";
-        textForView = textForView + "0";
-    }
-
-    public void clickOnButton1() {
-        rawInput = rawInput + "1";
-        textForView = textForView + "1";
-    }
-
-    public void clickOnButton2() {
-        rawInput = rawInput + "2";
-        textForView = textForView + "2";
-    }
-
-    public void clickOnButton3() {
-        rawInput = rawInput + "3";
-        textForView = textForView + "3";
-    }
-
-    public void clickOnButton4() {
-        rawInput = rawInput + "4";
-        textForView = textForView + "4";
-    }
-
-    public void clickOnButton5() {
-        rawInput = rawInput + "5";
-        textForView = textForView + "5";
-    }
-
-    public void clickOnButton6() {
-        rawInput = rawInput + "6";
-        textForView = textForView + "6";
-    }
-
-    public void clickOnButton7() {
-        rawInput = rawInput + "7";
-        textForView = textForView + "7";
-    }
-
-    public void clickOnButton8() {
-        rawInput = rawInput + "8";
-        textForView = textForView + "8";
-    }
-
-    public void clickOnButton9() {
-        rawInput = rawInput + "9";
-        textForView = textForView + "9";
+    public void clickOnButton(int number){
+        rawInput = rawInput + number;
+        textForView = textForView + number;
     }
 
     public void clickOnButtonDot() {
@@ -121,13 +77,14 @@ public class Calculator implements Serializable {
         result = 0;
     }
 
-    public void clickOnButtonDeleteLast(){
+    public void clickOnButtonDeleteLast() {
         textForView = textForView.substring(0, textForView.length() - 1);
         rawInput = textForView;
     }
 
     public void clickOnEqual() {
-        double number2 = 0;
+        boolean isDivisionByZero = false;
+        number2 = 0;
 
         if (operation == Operation.PERCENT) {
             result = number1 / 100;
@@ -142,6 +99,11 @@ public class Calculator implements Serializable {
                     result = number1 - number2;
                     break;
                 case DIVISION:
+                    if (number2 == 0) {
+                        isDivisionByZero = true;
+                        result = 0;
+                        break;
+                    }
                     result = number1 / number2;
                     break;
                 case MULTIPLICATION:
@@ -149,8 +111,7 @@ public class Calculator implements Serializable {
                     break;
             }
         }
-        number2 = 0;
-        viewResult();
+        viewResult(isDivisionByZero);
     }
 
     private void clickOnOperationButton() {
@@ -173,9 +134,12 @@ public class Calculator implements Serializable {
         }
     }
 
-
-    private void viewResult() {
-        textForView = String.format(Locale.getDefault(), "%f", result);
+    private void viewResult(boolean isDivisionByZero) {
+        if (!isDivisionByZero){
+            textForView = String.format(Locale.getDefault(), "%f", result);
+        } else {
+            textForView = "Деление на НОЛЬ!";
+        }
         number1 = result;
     }
 
@@ -203,7 +167,7 @@ public class Calculator implements Serializable {
         this.operation = operation;
     }
 
-    public boolean getisNegative() {
+    public boolean getIsNegative() {
         return isNegative;
     }
 
