@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="delete_all">Delete all</string>
+    <string name="delete_last">Delete last</string>
 </resources>

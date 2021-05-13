@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button.dark">
+        <item name="android:backgroundTint">@color/grey_400</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>
