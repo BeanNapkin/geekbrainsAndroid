@@ -2,4 +2,8 @@
     <string name="app_name">Calculator</string>
     <string name="delete_all">Delete all</string>
     <string name="delete_last">Delete last</string>
+    <string name="choose_theme">Выберите тему:</string>
+    <string name="dark">Тёмная</string>
+    <string name="white">Светлая</string>
+    <string name="theme">Тема</string>
 </resources>
